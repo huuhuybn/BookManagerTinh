@@ -31,22 +31,22 @@ public class NguoiDung_Activity extends AppCompatActivity {
         linearLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         arrayList=new ArrayList<>();
         arrayList.clear();
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
-
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
-
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
-
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
-        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
-        node_nguoiDungAdapter =new NodeNguoiDungAdapter(this,arrayList);
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
+//
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
+//
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
+//
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emone,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emthree,15455785));
+//        arrayList.add(new User("Nguyễn Tình",R.drawable.emtwo,15455785));
+//        node_nguoiDungAdapter =new NodeNguoiDungAdapter(this,arrayList);
         }
 
        void AddRecyclerview(){

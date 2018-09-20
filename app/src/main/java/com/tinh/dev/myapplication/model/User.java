@@ -2,9 +2,40 @@ package com.tinh.dev.myapplication.model;
 
 public class User {
 
+    private String username;
+    private String password;
     private String TenNguoiDung;
     private int AnhNguoiDung;
-    private int SDT;
+    private String SDT;
+
+    public User(String username, String password, String tenNguoiDung, int anhNguoiDung, String SDT) {
+        this.username = username;
+        this.password = password;
+        TenNguoiDung = tenNguoiDung;
+        AnhNguoiDung = anhNguoiDung;
+        this.SDT = SDT;
+    }
+
+    public User() {
+
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 
     public String getTenNguoiDung() {
         return TenNguoiDung;
@@ -22,15 +53,15 @@ public class User {
         AnhNguoiDung = anhNguoiDung;
     }
 
-    public int getSDT() {
+    public String getSDT() {
         return SDT;
     }
 
-    public void setSDT(int SDT) {
+    public void setSDT(String SDT) {
         this.SDT = SDT;
     }
 
-    public User(String tenNguoiDung, int anhNguoiDung, int SDT) {
+    public User(String tenNguoiDung, int anhNguoiDung, String SDT) {
 
         TenNguoiDung = tenNguoiDung;
         AnhNguoiDung = anhNguoiDung;

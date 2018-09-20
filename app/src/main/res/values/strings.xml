@@ -35,5 +35,6 @@
     <string name="gioi_thieu">Giới thiệu</string>
     <string name="dang_xuat">Đăng xuất</string>
     <string name="doi_mat_khau">Đổi mật khẩu</string>
+    <string name="notify_wrong_username_or_password">Wrong username or password, pls check again!</string>
 
 </resources>

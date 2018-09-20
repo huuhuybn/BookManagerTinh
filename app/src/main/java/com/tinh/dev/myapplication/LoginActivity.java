@@ -18,34 +18,51 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tinh.dev.myapplication.database.DatabaseHelper;
+import com.tinh.dev.myapplication.model.User;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity {
 
 
-    private EditText edtUserName,edtPassWord;
+    private EditText edtUserName, edtPassWord;
     private CheckBox ckbRememberPassword;
     private FloatingActionButton flbForMatText;
-    private TextView txtForgotPassword,txtContact;
+    private TextView txtForgotPassword, txtContact;
     private EditText email;
     private TextView txtMatKhau;
+
+
+    private DatabaseHelper databaseHelper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        databaseHelper = new DatabaseHelper(this);
+
+
+        // them user
+
+        User user = new User(
+                "huynh",
+                "admin123",
+                "Huy Nguyen",
+                0,
+                "0919030190");
+        databaseHelper.insertUser(user);
+
 
         AnhXa();
         Click();
 
 
-
-
     }
 
-    void Click(){
+    void Click() {
         edtUserName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,13 +80,12 @@ public class LoginActivity extends AppCompatActivity{
         flbForMatText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name=edtUserName.getText().toString().trim();
-                String pass=edtPassWord.getText().toString().trim();
-                if (name.equals("")&& pass.equals("")){
+                String name = edtUserName.getText().toString().trim();
+                String pass = edtPassWord.getText().toString().trim();
+                if (name.equals("") && pass.equals("")) {
                     edtUserName.setError(getString(R.string.error_Delete));
                     edtPassWord.setError(getString(R.string.error_Delete));
-                }
-                else {
+                } else {
                     edtUserName.setText("");
                     edtUserName.setHint("Nguyễn Văn Tình");
                     edtUserName.setTextSize(10f);
@@ -84,24 +100,24 @@ public class LoginActivity extends AppCompatActivity{
         txtForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog=new Dialog(LoginActivity.this);
-               dialog.setContentView(R.layout.dialog_forgot_password);
+                final Dialog dialog = new Dialog(LoginActivity.this);
+                dialog.setContentView(R.layout.dialog_forgot_password);
 
-                Button gui=dialog.findViewById(R.id.gui);
-                Button huy=dialog.findViewById(R.id.huy);
-                email=dialog.findViewById(R.id.maila);
-                txtMatKhau=dialog.findViewById(R.id.txtMatKhau);
+                Button gui = dialog.findViewById(R.id.gui);
+                Button huy = dialog.findViewById(R.id.huy);
+                email = dialog.findViewById(R.id.maila);
+                txtMatKhau = dialog.findViewById(R.id.txtMatKhau);
 
                 gui.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
-                        String a="(\\w)+\\@((\\w)+\\.)+(\\w{2,4})";
-                        String b=email.getText().toString();
+                        String a = "(\\w)+\\@((\\w)+\\.)+(\\w{2,4})";
+                        String b = email.getText().toString();
 
-                        if (b.matches(a)){
-                           txtMatKhau.setText("Mật khẩu của bạn:NguyenTinh");
-                        }else {
+                        if (b.matches(a)) {
+                            txtMatKhau.setText("Mật khẩu của bạn:NguyenTinh");
+                        } else {
                             email.setError("Email không hợp lệ");
                         }
                     }
@@ -115,62 +131,60 @@ public class LoginActivity extends AppCompatActivity{
                 });
 
 
-
-
-               dialog.show();
+                dialog.show();
             }
         });
 
         txtContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog=new Dialog(LoginActivity.this);
+                Dialog dialog = new Dialog(LoginActivity.this);
                 dialog.setContentView(R.layout.dialog_gioithieu);
                 dialog.show();
             }
         });
     }
 
-    void AnhXa(){
-        edtUserName=findViewById(R.id.edtUserNam);
-        edtPassWord=findViewById(R.id.edtPassWord);
+    void AnhXa() {
+        edtUserName = findViewById(R.id.edtUserNam);
+        edtPassWord = findViewById(R.id.edtPassWord);
 
-        ckbRememberPassword =  findViewById(R.id.ckbRememberPassword);
-        flbForMatText =  findViewById(R.id.flbForMatText);
+        ckbRememberPassword = findViewById(R.id.ckbRememberPassword);
+        flbForMatText = findViewById(R.id.flbForMatText);
         flbForMatText.setImageResource(R.drawable.ic_delete);
 
-        txtForgotPassword=findViewById(R.id.txtForgotpassword);
-        txtContact=findViewById(R.id.txtContact);
+        txtForgotPassword = findViewById(R.id.txtForgotpassword);
+        txtContact = findViewById(R.id.txtContact);
 
 
     }
 
-    void KiemTra(){
-        String name=edtUserName.getText().toString().trim();
-        String pass=edtPassWord.getText().toString().trim();
+    void KiemTra() {
+        String name = edtUserName.getText().toString().trim();
+        String pass = edtPassWord.getText().toString().trim();
 
-        if (name.equals("")){
+        if (name.equals("")) {
             edtUserName.setError(getString(R.string.error_UserName));
             return;
         }
 
-        String[] b={"!","~","@","#","$","%","^","&","*","*","(",")","_","-","=","+","[","]",";",":","\\","|","?","/","<",">",".",",","'"};
+        String[] b = {"!", "~", "@", "#", "$", "%", "^", "&", "*", "*", "(", ")", "_", "-", "=", "+", "[", "]", ";", ":", "\\", "|", "?", "/", "<", ">", ".", ",", "'"};
         //Toast.makeText(this, ""+b.length, Toast.LENGTH_SHORT).show();
-        for (int i=0;i<b.length;i++){
-            if (name.indexOf(b[i])>-1){
+        for (int i = 0; i < b.length; i++) {
+            if (name.indexOf(b[i]) > -1) {
                 edtUserName.setError(getString(R.string.error_Ki_Tu_Dac_Bite));
                 return;
             }
 
         }
 
-        if (pass.equals("")){
+        if (pass.equals("")) {
             edtPassWord.setError(getString(R.string.error_PassWord));
             return;
         }
 
-        for (int i=0;i<b.length;i++){
-            if (pass.indexOf(b[i])>-1){
+        for (int i = 0; i < b.length; i++) {
+            if (pass.indexOf(b[i]) > -1) {
 
                 edtPassWord.setError(getString(R.string.error_Ki_Tu_Dac_Bite));
                 return;
@@ -178,23 +192,40 @@ public class LoginActivity extends AppCompatActivity{
 
         }
 
-        if (pass.length()<6){
+        if (pass.length() < 6) {
 
             edtPassWord.setError(getString(R.string.error_PassWord_It_Hon_6Ki_Tu));
             return;
         }
 
-        startActivity(new Intent(this,HomeActivity.class));
-        finish();
+        User user = databaseHelper.getUserByUsername(name);
 
+        if (user == null){
+            Toast.makeText(LoginActivity.this,
+                    getString(R.string.notify_wrong_username_or_password),
+                    Toast.LENGTH_SHORT).show();
+        }else {
 
+            // lay ra password tu DB cua User
+            String passwordInDB = user.getPassword();
+
+            // so sanh 2 mat khau, neu giong thi cho vao Home va nguoc lai
+            if (passwordInDB.equals(pass)){
+                startActivity(new Intent(this, HomeActivity.class));
+                finish();
+            }else {
+                Toast.makeText(LoginActivity.this,
+                        getString(R.string.notify_wrong_username_or_password),
+                        Toast.LENGTH_SHORT).show();
+            }
         }
 
+    }
 
 
     public void DangNhap(View view) {
 
-       KiemTra();
+        KiemTra();
     }
 }
 
