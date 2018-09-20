@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:id="@+id/ic_QLLS"
+       android:title="@string/the_loai"
+       android:icon="@drawable/icon_dieu_huong"/>
+
+    <item android:id="@+id/ic_QLS"
+        android:title="@string/quan_li_sach"
+        android:icon="@drawable/icon_dieu_huong"/>
+
+
+    <item android:id="@+id/ic_QLTC"
+        android:title="@string/thong_ke"
+        android:icon="@drawable/icon_dieu_huong"/>
+
+
+    <item android:id="@+id/ic_GT"
+        android:title="@string/gioi_thieu"
+        android:icon="@drawable/icon_dieu_huong"/>
+
+ <item android:id="@+id/ic_DMK"
+     android:title="@string/doi_mat_khau"
+     android:icon="@drawable/icon_dieu_huong"/>
+
+
+    <item android:id="@+id/ic_DX"
+        android:title="@string/dang_xuat"
+        android:icon="@drawable/icon_dieu_huong"/>
+
+    <item android:id="@+id/ic_T"
+        android:title="@string/ic_exit"
+        android:icon="@drawable/icon_dieu_huong"/>
+</menu>

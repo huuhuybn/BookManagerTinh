@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tinh.dev.myapplication">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStyle2" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStyle3" />
+
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".NguoiDung_Activity"
+            android:label="Người dùng"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity">
+
+        </activity>
+
+        <activity
+            android:name=".QLLS_Activity"
+            android:label="Quản lí loại sách"
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity" />
+
+        <activity
+            android:name=".QLS_Activity"
+            android:label="Quản lí sách"
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity" />
+
+        <activity
+            android:name=".SBC_Activity"
+            android:label="Top 10 sách bán chạy"
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity" />
+
+        <activity
+            android:name=".ThongKe_Activity"
+            android:label="Thống kê"
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity" />
+
+        <activity
+            android:name=".HoaDon_Activity"
+            android:label="Hóa đơn"
+            android:screenOrientation="portrait"
+            android:theme="@style/NguoiDung_Activity" />
+    </application>
+
+</manifest>

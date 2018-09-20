@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    android:background="@color/colorAccent1"
+   >
+
+    <include layout="@layout/toolbar"/>
+
+  <android.support.v4.widget.DrawerLayout
+      android:id="@+id/drawerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+      <LinearLayout
+          android:padding="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+          <RelativeLayout
+              android:layout_marginBottom="56dp"
+              android:layout_marginTop="56dp"
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="match_parent">
+              
+              <LinearLayout
+                  android:id="@+id/layout_ND"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+                  
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/emthree"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/nguoi_dung"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+                  
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/layout_QLS"
+                  android:layout_centerVertical="true"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/bookicon"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/quan_li_sach"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+
+              </LinearLayout>
+
+
+              <LinearLayout
+                  android:id="@+id/layout_SBC"
+                  android:layout_alignParentBottom="true"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/money_icon"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/sach_ban_chay"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+
+              </LinearLayout>
+              
+          </RelativeLayout>
+
+
+
+
+
+
+
+          <RelativeLayout
+              android:layout_marginTop="56dp"
+              android:layout_marginBottom="56dp"
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="match_parent">
+
+              <LinearLayout
+                  android:id="@+id/layout_TL"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/cateicon"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/the_loai"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/layout_HD"
+                  android:layout_centerVertical="true"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/hdicon"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hoa_don"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+
+              </LinearLayout>
+
+
+              <LinearLayout
+                  android:id="@+id/layout_TK"
+                  android:layout_alignParentBottom="true"
+                  android:gravity="center_horizontal"
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="96dp"
+                      android:layout_height="96dp"
+                      android:src="@drawable/thongke"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/thong_ke"
+                      android:textSize="16sp"
+                      android:textColor="@color/colorText1"/>
+
+              </LinearLayout>
+
+          </RelativeLayout>
+
+
+      </LinearLayout>
+      <android.support.design.widget.NavigationView
+          app:itemTextColor="@color/colorOgin"
+          android:id="@+id/navigation"
+          android:layout_gravity="start"
+          android:fitsSystemWindows="true"
+          app:menu="@menu/menu"
+          app:headerLayout="@layout/heard"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent">
+
+      </android.support.design.widget.NavigationView>
+
+  </android.support.v4.widget.DrawerLayout>
+
+
+
+</LinearLayout>

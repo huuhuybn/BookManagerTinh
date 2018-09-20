@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Quản lí hiệu sách</string>
+    <string name="design_by_team_poly">Design By Team Poly</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="password1">***********</string>
+
+    <string name="nho_mat_khau">Nhớ mật khẩu</string>
+    <string name="quen_mat_khau">Quên mật khẩu?</string>
+    <string name="lien_he">Liên hệ</string>
+    <string name="error_UserName">Không được để trống</string>
+    <string name="error_PassWord">Không đươc để trống</string>
+    <string name="error_Ki_Tu_Dac_Bite">Không chứa kí tự đặc biêt</string>
+    <string name="error_PassWord_It_Hon_6Ki_Tu">Vui lòng nhập lại ,mật khẩu phải có ít nhất 6 kí tự</string>
+    <string name="error_Delete">Không có gì để xóa</string>
+    <string name="username1">Nguyễn Văn Tình</string>
+    <string name="nguoi_dung">Người dùng</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="search">search</string>
+    <string name="exit">Thoát</string>
+    <string name="quan_li_sach">Sách</string>
+    <string name="sach_ban_chay">Sách bán chạy</string>
+    <string name="the_loai">Loại sách</string>
+    <string name="thong_ke">Thống kê</string>
+    <string name="ic_exit">Thoát</string>
+    <string name="hoa_don">Hóa đơn</string>
+    <string name="password2">vuabocphet</string>
+    <string name="password3">Nhập lại mật khẩu</string>
+    <string name="nho_mat_khau1">Nhớ mật khẩu mới</string>
+    <string name="gioi_thieu">Giới thiệu</string>
+    <string name="dang_xuat">Đăng xuất</string>
+    <string name="doi_mat_khau">Đổi mật khẩu</string>
+
+</resources>
