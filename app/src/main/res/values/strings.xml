@@ -36,5 +36,12 @@
     <string name="dang_xuat">Đăng xuất</string>
     <string name="doi_mat_khau">Đổi mật khẩu</string>
     <string name="notify_wrong_username_or_password">Wrong username or password, pls check again!</string>
+    <string name="tv_name">Name</string>
+    <string name="tv_phone">Phone</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="notify_save_successful">Save Successful !!!</string>
+
+    <string name="notify_add_successful">Add User Successful !!!</string>
 
 </resources>

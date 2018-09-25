@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import com.tinh.dev.myapplication.model.SBC;
 import com.tinh.dev.myapplication.R;
-import com.tinh.dev.myapplication.holder.MyHolder;
+import com.tinh.dev.myapplication.holder.UserHolder;
 
 import java.util.ArrayList;
 
-public class NodeSBCAdapter extends RecyclerView.Adapter<MyHolder> {
+public class NodeSBCAdapter extends RecyclerView.Adapter<UserHolder> {
 
     private Context context;
     private ArrayList<SBC> arrayList;
@@ -24,14 +24,14 @@ public class NodeSBCAdapter extends RecyclerView.Adapter<MyHolder> {
     }
     @NonNull
     @Override
-    public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
         View view=inflater.inflate(R.layout.cardview,parent,false);
-        return new MyHolder(view);
+        return new UserHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UserHolder holder, int position) {
         SBC nguoiDung=arrayList.get(position);
         holder.txtChinh.setText("Mã sách:"+nguoiDung.getMaSach());
         holder.txtPhu.setText("Số lượng"+nguoiDung.getSL()+"");

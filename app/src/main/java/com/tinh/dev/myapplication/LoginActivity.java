@@ -20,7 +20,9 @@ import android.widget.Toast;
 
 import com.tinh.dev.myapplication.database.DatabaseHelper;
 import com.tinh.dev.myapplication.model.User;
+import com.tinh.dev.myapplication.sqlitedao.UserDAO;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -37,23 +39,20 @@ public class LoginActivity extends AppCompatActivity {
 
     private DatabaseHelper databaseHelper;
 
+    private UserDAO userDAO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         databaseHelper = new DatabaseHelper(this);
+        userDAO = new UserDAO(databaseHelper);
 
 
         // them user
 
-        User user = new User(
-                "huynh",
-                "admin123",
-                "Huy Nguyen",
-                0,
-                "0919030190");
-        databaseHelper.insertUser(user);
+
 
 
         AnhXa();
@@ -198,22 +197,22 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        User user = databaseHelper.getUserByUsername(name);
+        User user = userDAO.getUserByUsername(name);
 
-        if (user == null){
+        if (user == null) {
             Toast.makeText(LoginActivity.this,
                     getString(R.string.notify_wrong_username_or_password),
                     Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
 
             // lay ra password tu DB cua User
             String passwordInDB = user.getPassword();
 
             // so sanh 2 mat khau, neu giong thi cho vao Home va nguoc lai
-            if (passwordInDB.equals(pass)){
+            if (passwordInDB.equals(pass)) {
                 startActivity(new Intent(this, HomeActivity.class));
                 finish();
-            }else {
+            } else {
                 Toast.makeText(LoginActivity.this,
                         getString(R.string.notify_wrong_username_or_password),
                         Toast.LENGTH_SHORT).show();

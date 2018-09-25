@@ -7,14 +7,20 @@ import android.widget.TextView;
 
 import com.tinh.dev.myapplication.R;
 
-public class MyHolder extends RecyclerView.ViewHolder {
-    public TextView txtChinh,txtPhu;
-    public ImageView imgView;
-    public MyHolder(View itemView) {
+public class UserHolder extends RecyclerView.ViewHolder {
+    public final TextView txtChinh,txtPhu;
+    public final ImageView imgView;
+
+    public final ImageView btnDelete;
+
+
+
+    public UserHolder(View itemView) {
         super(itemView);
         txtChinh=itemView.findViewById(R.id.txtChinh);
         txtPhu=itemView.findViewById(R.id.txtPhu);
         imgView=itemView.findViewById(R.id.imgView);
+        btnDelete = itemView.findViewById(R.id.btnDeleteUser);
 
 
     }

@@ -20,11 +20,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
@@ -45,11 +41,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
-            android:name=".NguoiDung_Activity"
+            android:name=".ListUserActivity"
             android:label="Người dùng"
-
             android:screenOrientation="portrait"
             android:theme="@style/NguoiDung_Activity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
