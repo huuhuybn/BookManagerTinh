@@ -14,9 +14,14 @@ public class UserHolder extends RecyclerView.ViewHolder {
     public final ImageView btnDelete;
 
 
+    public final ImageView btnEdit;
+
+
 
     public UserHolder(View itemView) {
         super(itemView);
+
+        btnEdit = itemView.findViewById(R.id.btnEdit);
         txtChinh=itemView.findViewById(R.id.txtChinh);
         txtPhu=itemView.findViewById(R.id.txtPhu);
         imgView=itemView.findViewById(R.id.imgView);
