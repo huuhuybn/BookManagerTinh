@@ -24,6 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constant {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL(CREATE_TABLE_USER);
+        sqLiteDatabase.execSQL(CREATE_TABLE_TYPE_BOOK);
 
     }
 
@@ -31,6 +32,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constant {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TYPE_BOOK);
+
         onCreate(sqLiteDatabase);
 
     }

@@ -32,6 +32,7 @@
          android:textColorHint="@color/colorTextHint"
          android:textColor="@color/colorOgin"
          android:textSize="10sp"
+         android:text="admin"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:hint="@string/username1"/>
@@ -49,6 +50,7 @@
         android:backgroundTint="@color/colorOgin"
         android:id="@+id/edtPassWord"
         android:inputType="textPassword"
+        android:text="admin123"
         android:textColorHint="@color/colorTextHint"
         android:textColor="@color/colorOgin"
         android:textSize="10sp"

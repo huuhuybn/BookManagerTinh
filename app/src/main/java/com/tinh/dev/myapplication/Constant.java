@@ -27,7 +27,34 @@ public interface Constant {
     /*Bang Book*/
 
 
-    /*Bang Book Type*/
+    /*Bang Book TypeBook*/
+
+    // CREATE TABLE TypeBook (MaTheLoai CHAR(5) PRIMARY KEY NOT NULL,
+    // typeName NVARCHAR(50) NOT NULL, Description NVARCHAR(255), Position INT)
+
+
+    // Ten bang
+    String TABLE_TYPE_BOOK = "typeBook";
+
+    // Ten cot
+
+    String TB_COLUMN_ID = "MaTheLoai";
+    String TB_COLUMN_NAME = "typeName";
+    String TB_COLUMN_DES = "Description";
+    String TB_COLUMN_POS = "Position";
+
+
+    String CREATE_TABLE_TYPE_BOOK = "CREATE TABLE " + TABLE_TYPE_BOOK + "(" +
+            "" + TB_COLUMN_ID + " CHAR(5) PRIMARY KEY NOT NULL," +
+            "" + TB_COLUMN_NAME + " NVARCHAR(50) NOT NULL," +
+            "" + TB_COLUMN_DES + " NVARCHAR(255)," +
+            "" + TB_COLUMN_POS + " INT" +
+            ")";
+
+
+
+
+
 
 
 

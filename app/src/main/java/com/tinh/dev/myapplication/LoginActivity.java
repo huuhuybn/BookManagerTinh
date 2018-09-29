@@ -51,10 +51,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
         // them user
-
-
-
-
+        User user = new User();
+        user.setPassword("admin123");
+        user.setUsername("admin");
+        user.setSDT("0919030190");
+        user.setTenNguoiDung("Huy Nguyen");
+        user.setAnhNguoiDung(R.drawable.ic_header);
+        userDAO.insertUser(user);
         AnhXa();
         Click();
 
