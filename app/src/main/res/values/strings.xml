@@ -43,5 +43,7 @@
     <string name="notify_save_successful">Save Successful !!!</string>
 
     <string name="notify_add_successful">Add User Successful !!!</string>
+    <string name="date_picker">Datepicker</string>
+    <string name="notify_max_bill_id_length">Bill ID\'s length is the maximum 7 characters!!!</string>
 
 </resources>

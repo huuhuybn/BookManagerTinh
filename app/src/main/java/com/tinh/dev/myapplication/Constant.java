@@ -3,16 +3,16 @@ package com.tinh.dev.myapplication;
 public interface Constant {
     /*Bang User*/
     // Ten Bang
-     String TABLE_USER = "User";
+    String TABLE_USER = "User";
 
     // Ten Cot
-     String COLUMN_USERNAME = "userName";
-     String COLUMN_PASSWORD = "Password";
-     String COLUMN_PHONE = "Phone";
-     String COLUMN_NAME = "hoTen";
+    String COLUMN_USERNAME = "userName";
+    String COLUMN_PASSWORD = "Password";
+    String COLUMN_PHONE = "Phone";
+    String COLUMN_NAME = "hoTen";
 
     // Cau lenh tao bang
-     String CREATE_TABLE_USER = "CREATE TABLE " + TABLE_USER + "(" +
+    String CREATE_TABLE_USER = "CREATE TABLE " + TABLE_USER + "(" +
 
             COLUMN_USERNAME + " NVARCHAR(50) PRIMARY KEY," +
 
@@ -52,10 +52,21 @@ public interface Constant {
             ")";
 
 
+    // BILL (INVOICE) TABLE
 
+    // CREATE TABLE Bill (MaHoaDon NCHAR(7) PRIMARY KEY NOT NULL, NgayMua LONG NOT NULL)
 
+    String TABLE_BILL = "Bill";
 
+    // khai bao cac cot
+    String B_ID = "MaHoaDon";
+    String B_DATE = "NgayMua";
 
+    // khai bao bien' tao bang Bill
+    String CREATE_TABLE_BILL = "CREATE TABLE " + TABLE_BILL + "(" +
+            "" + B_ID + " NCHAR(7) PRIMARY KEY NOT NULL," +
+             "" + B_DATE + " LONG NOT NULL" +
+            ")";
 
 
 

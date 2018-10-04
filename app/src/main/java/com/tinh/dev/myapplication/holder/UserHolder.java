@@ -17,7 +17,6 @@ public class UserHolder extends RecyclerView.ViewHolder {
     public final ImageView btnEdit;
 
 
-
     public UserHolder(View itemView) {
         super(itemView);
 

@@ -135,7 +135,7 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
         layoutHD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,HoaDon_Activity.class));
+                startActivity(new Intent(HomeActivity.this,BillActivity.class));
             }
         });
 

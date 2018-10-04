@@ -80,7 +80,7 @@
             android:theme="@style/NguoiDung_Activity" />
 
         <activity
-            android:name=".HoaDon_Activity"
+            android:name=".BillActivity"
             android:label="Hóa đơn"
             android:screenOrientation="portrait"
             android:theme="@style/NguoiDung_Activity" />
